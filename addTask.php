@@ -13,7 +13,7 @@ if(isset($_GET['startWork']) && isset($_GET['endWork']) && isset($_GET['task']))
         $newEndWork = hourToDateTime($endWork);
     }
     
-    if(strlen(trim($tasks))>0){
+    if(strlen(trim($task))>0){
         $mysqli = db();
         $query = "INSERT INTO tasks VALUES(NULL, '".$task."', '".$newStartWork."', '".$newEndWork."', '".$user."')";
         if ($result = $mysqli->query($query)) {

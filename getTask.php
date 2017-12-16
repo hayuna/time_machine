@@ -5,7 +5,7 @@ if(isset($_POST['date'])){
     $date = $_POST['date'];
     $user = $_SESSION['login'];
     $mysqli = db();
-    $query = "SELECT * FROM tasks WHERE Start_task <= '$date' and End_task >= '$date' and user = '".$user."'";
+    $query = "SELECT * FROM tasks WHERE left(Start_task,10) <= '$date' and left(End_task,10) >= '$date' and user = '".$user."'";
     
     if ($result = $mysqli->query($query)) {
         while ($r = $result->fetch_assoc()) {

@@ -1,6 +1,7 @@
 <button class="btn btn-primary logout">logout</button>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://use.fontawesome.com/200aeae3e4.js"></script>
 <style>.row{margin-left:15px;margin-right:15px;}</style>
 <body>
 <hr>
@@ -20,11 +21,11 @@
             <div class="col-md-2">Task</div>
             <div class="col-md-2"><input id="task" style="width:200px;margin-bottom:20px;"></div>
         </div>
-<!-- 
+
         <div class="row">
             <div class="col-md-2">Monthly work time</div>
             <div class="col-md-2"><input id="monthly_work_time" style="width:200px;margin-bottom:20px;"></div>
-        </div> -->
+        </div>
 
         <div class="row">
             <div class="col-md-4 text-center"><button  style="width:306px;margin-bottom:20px;" id="task_accept">OK</button></div>
@@ -38,7 +39,7 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        lista zadań <div id="tasks_list" style="width: 80%;height: 150px;overflow: scroll;"></div>
+        lista zadań <div disabled="disabled" id="tasks_list" style="width: 80%;height: 150px;overflow: scroll;"></div>
     </div>
 </div>
 

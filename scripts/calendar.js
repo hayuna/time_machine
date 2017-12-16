@@ -40,10 +40,8 @@
             this.format = DPGlobal.parseFormat(options.format||this.element.data('date-format')||'mm/dd/yyyy');
             this.isInline = false;
             this.isInput = this.element.is('input');
-            console.log('__1__');
             this.component = this.element.is('.date') ? this.element.find('.add-on') : false;
             this.hasInput = this.component && this.element.find('input').length;
-            console.log('__2__');
             if(this.component && this.component.length === 0)
                 this.component = false;
     
@@ -155,7 +153,6 @@
                             click: $.proxy(this.show, this)
                         }]
                     ];
-                    console.log('__3__');
                 }
                             else if (this.element.is('div')) {  // inline datepicker
                                 this.isInline = true;
@@ -216,7 +213,6 @@
                         
                     )
                 )
-                console.log('__4__');
                     this.setValue();
                 this.element.trigger({
                     type: 'hide',
@@ -253,13 +249,10 @@
                 if (!this.isInput) {
                     if (this.component){
                         this.element.find('input').prop('value', formatted);
-                        console.log('__5__');
                     }
                     this.element.data('date', formatted);
-                    console.log('__6__');
                 } else {
                     this.element.prop('value', formatted);
-                    console.log('__7__');
                 }
             },
     
@@ -318,7 +311,6 @@
                     fromArgs = true;
                 } else {
                     date = this.isInput ? this.element.prop('value') : this.element.data('date') || this.element.find('input').prop('value');
-                    console.log('__10__');
                 }
     
                 this.date = DPGlobal.parseDate(date, this.format, this.language);
@@ -606,7 +598,17 @@
                         data: { date: dateFromInput }
                     })
                     .done(msg => {
-                        $('#tasks_list').html(`${msg}`);        
+                        $('#tasks_list').html(msg);        
+                    });
+
+
+                    $.ajax({
+                        method: 'POST',
+                        url: 'getMonthlyHours.php',
+                        data: { month: dateFromInput }
+                    })
+                    .done(msg => {
+                        $('#monthly_work_time').val(msg);        
                     });
                     /* 
                     
@@ -760,7 +762,6 @@
                         element = this.element;
                     } else if (this.component){
                         element = this.element.find('input');
-                        console.log('__12__');
                     }
                     if (element) {
                         element.change();
