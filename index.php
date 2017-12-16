@@ -2,7 +2,7 @@
     session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
         }else{
             include 'logged_template.php';
         }
-        include 'modals_template.php';
+        include 'modals_template.html';
     ?>
 </body>
 </html>
