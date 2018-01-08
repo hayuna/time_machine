@@ -74,3 +74,15 @@
     background-color: #5cb85c;
     color: white;
 }
+
+.modal_error .modal-header, .modal_error .modal-body, .modal_error .modal-footer {
+    background-color: tomato;
+}
+
+.modal_warning .modal-header, .modal_warning .modal-body, .modal_warning .modal-footer{
+    background-color: #f0ad4e;
+}
+
+.modal-backdrop{
+    z-index:0;
+}

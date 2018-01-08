@@ -594,7 +594,7 @@
                     const dateFromInput = element.val();
                     $.ajax({
                         method: 'POST',
-                        url: 'getTask.php',
+                        url: 'ajax/getTask.php',
                         data: { date: dateFromInput }
                     })
                     .done(msg => {
@@ -604,7 +604,7 @@
 
                     $.ajax({
                         method: 'POST',
-                        url: 'getMonthlyHours.php',
+                        url: 'ajax/getMonthlyHours.php',
                         data: { month: dateFromInput }
                     })
                     .done(msg => {

@@ -20,7 +20,7 @@ $(document).ready(() => {
         const pass = $('.form_login_password').val();
         $.ajax({
             method: 'POST',
-            url: 'signin.php',
+            url: 'util/signin.php',
             data: { login, password: pass }
         })
         .done(msg => {
@@ -43,7 +43,7 @@ $(document).ready(() => {
     $('#modal_nr_6_option1').on('click', () => {
         $.ajax({
             method: 'POST',
-            url: 'logout.php'
+            url: 'util/logout.php'
         });
         location.reload();
     });
@@ -58,25 +58,25 @@ $(document).ready(() => {
         const task = $('#task').val();
         $.ajax({
             method: 'GET',
-            url: 'addTask.php',
+            url: 'ajax/addTask.php',
             data: { startWork, endWork, task }
         })
         .done(msg => {
-            switch(msg){
-                case "0" : 
-                    //nieznany błąd
+            switch (msg){
+                case '0':
+                    // nieznany błąd
                     $('#modal_nr_9').modal();
                 break;
-                case "1" : 
-                    //dodano zadanie
+                case '1' :
+                    // dodano zadanie
                     $('#modal_nr_8').modal();
                 break;
-                case "2": 
-                    //pusta nazwa zadania
+                case '2':
+                    // pusta nazwa zadania
                     $('#modal_nr_11').modal();
                 break;
-                case "3": 
-                    //problem z bazą danych
+                case '3':
+                    // problem z bazą danych
                     $('#modal_nr_10').modal();
                 break;
             }

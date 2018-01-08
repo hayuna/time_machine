@@ -1,5 +1,5 @@
 <?php
-include_once 'functions.php';
+include_once '../util/functions.php';
 session_start();
 if(isset($_POST['month'])){
     $month = $_POST['month'];

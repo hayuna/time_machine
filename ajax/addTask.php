@@ -1,5 +1,5 @@
 <?php
-include_once 'functions.php';
+include_once '../util/functions.php';
 session_start();
 if(isset($_GET['startWork']) && isset($_GET['endWork']) && isset($_GET['task'])){
     $startWork = $_GET['startWork'];

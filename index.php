@@ -1,6 +1,4 @@
-<?php
-    session_start();
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -14,17 +12,21 @@
     <script src="scripts/script.js"></script>
     <link rel="stylesheet" href="modal/style.css">
     <link rel="stylesheet" href="styles/style.css">
-    <style>.modal-backdrop{z-index:0;}</style> 
+    <script src="https://use.fontawesome.com/200aeae3e4.js"></script>
  
 </head>
 <body>
     <?php
         if(!isset($_SESSION['login'])){
-            include 'not_logged_template.php';
+            include 'template/not_logged_template.php';
         }else{
-            include 'logged_template.php';
+            include 'template/logged_template.php';
         }
-        include 'modals_template.html';
+        include 'template/modals_template.php';
     ?>
+    <link rel="stylesheet" href="styles/datepicker.css">
+    <link rel="stylesheet" href="styles/logged.css">
+    <script src="scripts/calendar.js"></script>
+    <script>$('#datepickersss').datepicker({maxViewMode: 2,language: "pl",keyboardNavigation: false,autoclose: true,todayHighlight: true,format: "yyyy-mm-dd"});</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<div class="modal fade" id="modal_nr_1" role="dialog">
+<div class="modal fade modal_warning" id="modal_nr_1" role="dialog">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -11,7 +11,7 @@
 	</div>
 </div>
 
-<div class="modal fade" id="modal_nr_2" role="dialog">
+<div class="modal fade modal_warning" id="modal_nr_2" role="dialog">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -69,7 +69,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="modal_nr_5" role="dialog">
+<div class="modal fade modal_error" id="modal_nr_5" role="dialog">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -82,7 +82,7 @@
 	</div>
 </div>
 
-<div class="modal fade" id="modal_nr_6" role="dialog">
+<div class="modal fade modal_warning" id="modal_nr_6" role="dialog">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -97,7 +97,7 @@
 	</div>
 </div>
 
-<div class="modal fade" id="modal_nr_7" role="dialog">
+<div class="modal fade modal_warning" id="modal_nr_7" role="dialog">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -123,7 +123,7 @@
 	</div>
 </div>
 
-<div class="modal fade" id="modal_nr_9" role="dialog">
+<div class="modal fade modal_error" id="modal_nr_9" role="dialog">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -137,7 +137,7 @@
 </div>
 
 
-<div class="modal fade" id="modal_nr_10" role="dialog">
+<div class="modal fade modal_error" id="modal_nr_10" role="dialog">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -150,7 +150,7 @@
 	</div>
 </div>
 
-<div class="modal fade" id="modal_nr_11" role="dialog">
+<div class="modal fade modal_error" id="modal_nr_11" role="dialog">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-header">
