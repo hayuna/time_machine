@@ -24,10 +24,12 @@ $(document).ready(() => {
             data: { login, password: pass }
         })
         .done(msg => {
-            if (msg){
+            if (msg === '1'){
                 $('#modal_nr_4').modal();
-            } else {
+            } else if (msg.length < 1) {
                 $('#modal_nr_5').modal();
+            } else {
+                $('#modal_nr_12').modal();
             }
         });
     });
@@ -44,8 +46,10 @@ $(document).ready(() => {
         $.ajax({
             method: 'POST',
             url: 'util/logout.php'
+        })
+        .done(() => {
+            location.reload();
         });
-        location.reload();
     });
 
     $('#modal_nr_6_option2').on('click', () => {
@@ -62,23 +66,15 @@ $(document).ready(() => {
             data: { startWork, endWork, task }
         })
         .done(msg => {
-            switch (msg){
-                case '0':
-                    // nieznany błąd
-                    $('#modal_nr_9').modal();
-                break;
-                case '1' :
-                    // dodano zadanie
-                    $('#modal_nr_8').modal();
-                break;
-                case '2':
-                    // pusta nazwa zadania
-                    $('#modal_nr_11').modal();
-                break;
-                case '3':
-                    // problem z bazą danych
-                    $('#modal_nr_10').modal();
-                break;
+            if (msg === '1') {
+                // dodano zadanie
+                $('#modal_nr_8').modal();
+            } else if (msg === '2'){
+                // pusta nazwa zadania
+                $('#modal_nr_11').modal();
+            } else {
+                // problem z bazą danych
+                $('#modal_nr_10').modal();
             }
         });
     });

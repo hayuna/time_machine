@@ -162,3 +162,16 @@
 		</div>
 	</div>
 </div>
+
+<div class="modal fade modal_error" id="modal_nr_12" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<center><h4 class="modal-title">Wystąpił problem z bazą danych</h4></center>
+			</div>
+			<div class="modal-footer">
+				<center><button type="button" class="btn btn-default" data-dismiss="modal" id="modal_nr_12_option1">OK</button></center>
+			</div>
+		</div>
+	</div>
+</div>
